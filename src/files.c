@@ -167,7 +167,7 @@ static bool match_glob_patterns ( const char *basename, FileBrowserFileData *fd 
 {
     int len = strlen ( basename );
     for ( int i = 0; i < fd->num_exclude_patterns; i++ ) {
-        if ( g_pattern_match ( fd->exclude_patterns[i], len, basename, NULL ) ) {
+        if ( g_pattern_spec_match ( fd->exclude_patterns[i], len, basename, NULL ) ) {
             return false;
         }
     }

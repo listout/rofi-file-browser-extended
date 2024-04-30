@@ -48,7 +48,7 @@ void request_icons_for_file ( FBFile *fbfile, int icon_size, FileBrowserIconData
         }
     }
 
-    unsigned long num_icon_names;
+    gsize num_icon_names;
     char** icon_names_raw = g_array_steal ( icon_names, &num_icon_names );
 
     /* Create icon fetcher requests. */
